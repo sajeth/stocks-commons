@@ -1,9 +1,9 @@
-package com.saji.pojos.configurations;
+package com.saji.stocks.pojo.configurations;
 
-import com.saji.pojos.common.BaseEntity;
-import com.saji.pojos.common.LovPojo;
+import com.saji.stocks.pojo.common.BasePojo;
+import com.saji.stocks.pojo.common.LovPojo;
 
-public class ExchngInvstmntPojo extends BaseEntity {
+public class ExchngInvstmntPojo extends BasePojo {
 
     private LovPojo investment;
     private String invstmntUrl;
@@ -11,8 +11,11 @@ public class ExchngInvstmntPojo extends BaseEntity {
     private Integer invstmntColStrt;
     private Integer invstmntColEnd;
     private String invstmntPath;
+    private Integer link;
+    private Integer key;
 
     public ExchngInvstmntPojo() {
+        super();
     }
 
     public ExchngInvstmntPojo(LovPojo investment, String invstmntUrl, Integer invstmntRow, Integer invstmntColStrt, Integer invstmntColEnd, String invstmntPath) {
@@ -72,4 +75,19 @@ public class ExchngInvstmntPojo extends BaseEntity {
         this.investment = investment;
     }
 
+    public Integer getLink() {
+        return link;
+    }
+
+    public void setLink(Integer link) {
+        this.link = link;
+    }
+
+    public Integer getKey() {
+        return key;
+    }
+
+    public void setKey(Integer key) {
+        this.key = key;
+    }
 }

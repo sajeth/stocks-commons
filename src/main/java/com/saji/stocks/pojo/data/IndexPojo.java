@@ -1,11 +1,11 @@
-package com.saji.pojos.data;
+package com.saji.stocks.pojo.data;
 
-import com.saji.pojos.common.BaseEntity;
+import com.saji.stocks.pojo.common.BasePojo;
 
 import java.math.BigDecimal;
 
 
-public class IndexPojo extends BaseEntity {
+public class IndexPojo extends BasePojo {
 
     private BigDecimal open;
     private BigDecimal high;
@@ -20,6 +20,7 @@ public class IndexPojo extends BaseEntity {
     private BigDecimal percentageInTotalTurnOver;
 
     public IndexPojo() {
+        super();
     }
 
     public BigDecimal getOpen() {

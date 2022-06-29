@@ -1,10 +1,10 @@
-package com.saji.pojos.kite;
+package com.saji.stocks.pojo.kite;
 
-import com.saji.pojos.common.BaseEntity;
+import com.saji.stocks.pojo.common.BasePojo;
 
 import java.util.Set;
 
-public class UserPojo extends BaseEntity {
+public class UserPojo extends BasePojo {
     private String password;
     private String pin;
     private String tpin;
@@ -14,6 +14,7 @@ public class UserPojo extends BaseEntity {
     private Set<UserPortfolioPojo> userPortfolios;
 
     public UserPojo() {
+        super();
     }
 
     public UserPojo(String password, String pin, String tpin, String email, String phoneNumber) {

@@ -1,12 +1,12 @@
-package com.saji.pojos.data;
+package com.saji.stocks.pojo.data;
 
-import com.saji.pojos.common.BaseEntity;
+import com.saji.stocks.pojo.common.BasePojo;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
 
-public class BondPojo extends BaseEntity {
+public class BondPojo extends BasePojo {
     private String dateOfIssuance;
     private BigDecimal amount;
     private BigInteger noOfInvestors;
@@ -28,6 +28,7 @@ public class BondPojo extends BaseEntity {
     }
 
     public BondPojo() {
+        super();
     }
 
     public String getDateOfIssuance() {

@@ -1,4 +1,4 @@
-package com.saji.constants;
+package com.saji.stocks.constants;
 
 public enum LogicalDelIn {
     N("N"),
@@ -6,7 +6,7 @@ public enum LogicalDelIn {
 
     public final String label;
 
-    private LogicalDelIn(String label) {
+    LogicalDelIn(String label) {
         this.label = label;
     }
 }

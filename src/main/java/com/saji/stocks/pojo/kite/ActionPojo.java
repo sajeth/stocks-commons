@@ -1,11 +1,11 @@
-package com.saji.pojos.kite;
+package com.saji.stocks.pojo.kite;
 
-import com.saji.pojos.common.BaseEntity;
+import com.saji.stocks.pojo.common.BasePojo;
 
 import java.util.Set;
 
 
-public class ActionPojo extends BaseEntity {
+public class ActionPojo extends BasePojo {
 
     private Set<StepPojo> steps;
 

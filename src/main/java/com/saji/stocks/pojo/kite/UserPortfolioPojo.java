@@ -1,12 +1,12 @@
-package com.saji.pojos.kite;
+package com.saji.stocks.pojo.kite;
 
-import com.saji.pojos.common.BaseEntity;
+import com.saji.stocks.pojo.common.BasePojo;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
 
-public class UserPortfolioPojo extends BaseEntity {
+public class UserPortfolioPojo extends BasePojo {
 
     private String investmentType;
     private BigInteger investmentId;
@@ -18,6 +18,7 @@ public class UserPortfolioPojo extends BaseEntity {
 
 
     public UserPortfolioPojo() {
+        super();
     }
 
     public UserPortfolioPojo(String investmentType, BigInteger investmentId, BigDecimal amountInvested, BigDecimal profit, BigDecimal dividendsEarned, UserPojo userid) {

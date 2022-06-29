@@ -1,14 +1,15 @@
-package com.saji.pojos.configurations;
+package com.saji.stocks.pojo.configurations;
 
-import com.saji.pojos.common.BaseEntity;
+import com.saji.stocks.pojo.common.BasePojo;
 
 
-public class CountryPojo extends BaseEntity {
+public class CountryPojo extends BasePojo {
 
     private String countryCode;
     private String currency;
 
     public CountryPojo() {
+        super();
     }
 
     public CountryPojo(final String countryName, final String countryCode, final String currency) {

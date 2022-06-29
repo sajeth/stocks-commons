@@ -1,12 +1,12 @@
-package com.saji.pojos.data;
+package com.saji.stocks.pojo.data;
 
-import com.saji.pojos.common.BaseEntity;
+import com.saji.stocks.pojo.common.BasePojo;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
 
-public class ETFPojo extends BaseEntity {
+public class ETFPojo extends BasePojo {
     private BigInteger assetType;
     private String ltpClose;
     private String change;
@@ -19,6 +19,7 @@ public class ETFPojo extends BaseEntity {
     private String cktLimits;
 
     public ETFPojo() {
+        super();
     }
 
 

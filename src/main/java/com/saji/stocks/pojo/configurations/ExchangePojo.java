@@ -1,9 +1,9 @@
-package com.saji.pojos.configurations;
+package com.saji.stocks.pojo.configurations;
 
-import com.saji.pojos.common.BaseEntity;
+import com.saji.stocks.pojo.common.BasePojo;
 
 
-public class ExchangePojo extends BaseEntity {
+public class ExchangePojo extends BasePojo {
 
     private String yRef;
     private String homePage;
@@ -14,6 +14,7 @@ public class ExchangePojo extends BaseEntity {
     private String eodCode;
 
     public ExchangePojo() {
+        super();
     }
 
     public ExchangePojo(String yRef, String homePage, String bloombergExchangeCode, String bloomBergCompositeCode, String description, String googlePrefix, String eodCode) {

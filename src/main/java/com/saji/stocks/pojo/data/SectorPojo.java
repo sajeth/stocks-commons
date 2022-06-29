@@ -1,12 +1,13 @@
-package com.saji.pojos.data;
+package com.saji.stocks.pojo.data;
 
-import com.saji.pojos.common.BaseEntity;
+import com.saji.stocks.pojo.common.BasePojo;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Set;
 
 
-public class SectorPojo extends BaseEntity {
+public class SectorPojo extends BasePojo {
 
     private BigDecimal sectorPE;
     private BigDecimal sectorPB;
@@ -14,6 +15,7 @@ public class SectorPojo extends BaseEntity {
     private Set<EquityPojo> stocks;
 
     public SectorPojo() {
+        super();
     }
 
     public SectorPojo(BigInteger sectorId, String sector, BigDecimal sectorPE, BigDecimal sectorPB, BigDecimal sectorDY) {

@@ -1,11 +1,12 @@
-package com.saji.pojos.common;
+package com.saji.stocks.pojo.common;
 
-public class LovPojo extends BaseEntity {
+public class LovPojo extends BasePojo {
 
     private String type;
 
 
     public LovPojo() {
+        super();
     }
 
     public String getType() {
