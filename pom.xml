@@ -6,7 +6,7 @@
 
     <groupId>com.saji.stocks.commons</groupId>
     <artifactId>stocks-commons</artifactId>
-    <version>1.0.0</version>
+    <version>0.0.1</version>
     <parent>
         <groupId>com.saji.stocks.parent</groupId>
         <artifactId>stocks-parent</artifactId>
