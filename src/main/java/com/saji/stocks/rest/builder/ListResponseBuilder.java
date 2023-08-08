@@ -1,30 +1,31 @@
 package com.saji.stocks.rest.builder;
 
 import com.saji.stocks.rest.ListResponse;
+import org.springframework.http.HttpStatus;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
-public class ListResponseBuilder<T1> {
-    private ListResponse<T1> response;
+public class ListResponseBuilder<T> {
+    private ListResponse<T> response;
 
-    public ListResponse<T1> validate(CompletableFuture<ListResponse<T1>> t) {
-        ListResponse<T1> output;
+    public ListResponse<T> validate(CompletableFuture<ListResponse<T>> t) {
+        ListResponse<T> output;
         try {
             output = t.get();
         } catch (InterruptedException | ExecutionException e) {
-            output = new ListResponse<T1>(500, e);
+            output = new ListResponse<>(500, e);
         }
         return output;
     }
 
-    public ListResponse<T1> success(int status, List<T1> response) {
-        return new ListResponse<T1>(response, status);
+    public ListResponse<T> success(HttpStatus status, List<T> response) {
+        return new ListResponse<>(response, status.value());
     }
 
-    public ListResponse<T1> error(Throwable errorResponse) {
-        return new ListResponse<T1>(500, new Exception(errorResponse.getMessage()));
+    public ListResponse<T> error(Throwable errorResponse) {
+        return new ListResponse<>(500, new Exception(errorResponse.getMessage()));
     }
 
 }

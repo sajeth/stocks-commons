@@ -1,7 +1,11 @@
 package com.saji.stocks.rest;
 
-import java.util.List;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.util.List;
+@Setter
+@Getter
 public class ListResponse<T> extends Response {
     private List<T> response;
 
@@ -13,4 +17,5 @@ public class ListResponse<T> extends Response {
     public ListResponse(Integer code, Exception exception) {
         super(code, exception);
     }
+
 }

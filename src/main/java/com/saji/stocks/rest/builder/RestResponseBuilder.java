@@ -1,6 +1,7 @@
 package com.saji.stocks.rest.builder;
 
 import com.saji.stocks.rest.RestResponse;
+import org.springframework.http.HttpStatus;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
@@ -13,17 +14,17 @@ public class RestResponseBuilder<T1> {
         try {
             output = t.get();
         } catch (InterruptedException | ExecutionException e) {
-            output = new RestResponse<T1>(500, e);
+            output = new RestResponse<>(500, e);
         }
         return output;
     }
 
-    public RestResponse<T1> success(int status, T1 response) {
-        return new RestResponse<T1>(response, status);
+    public RestResponse<T1> success(HttpStatus status, T1 response) {
+        return new RestResponse<>(response, status.value());
     }
 
-    public RestResponse<T1> error(Throwable errorResponse) {
-        return new RestResponse<T1>(500, new Exception(errorResponse.getMessage()));
+    public RestResponse<T1> error(HttpStatus status,Exception errorResponse) {
+        return new RestResponse<>(status.value(), errorResponse);
 
     }
 }
