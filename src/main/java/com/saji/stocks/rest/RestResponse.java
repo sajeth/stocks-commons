@@ -1,5 +1,6 @@
 package com.saji.stocks.rest;
 
+
 public class RestResponse<T> extends Response {
     private T response;
 
@@ -11,5 +12,9 @@ public class RestResponse<T> extends Response {
 
     public RestResponse(Integer code, Exception exception) {
         super(code, exception);
+    }
+
+    public T getResponse() {
+        return response;
     }
 }
