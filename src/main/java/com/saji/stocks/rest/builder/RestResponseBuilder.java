@@ -23,7 +23,7 @@ public class RestResponseBuilder<T1> {
         return new RestResponse<>(response, status.value());
     }
 
-    public RestResponse<T1> error(HttpStatus status,Exception errorResponse) {
+    public RestResponse<T1> error(HttpStatus status, Exception errorResponse) {
         return new RestResponse<>(status.value(), errorResponse);
 
     }

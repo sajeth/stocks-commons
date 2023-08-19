@@ -1,10 +1,6 @@
 package com.saji.stocks.rest;
 
-import lombok.Getter;
-import lombok.Setter;
 
-@Setter
-@Getter
 public class RestResponse<T> extends Response {
     private T response;
 
@@ -18,4 +14,7 @@ public class RestResponse<T> extends Response {
         super(code, exception);
     }
 
+    public T getResponse() {
+        return response;
+    }
 }
